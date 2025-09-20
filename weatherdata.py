@@ -72,22 +72,37 @@ for i in range(1, 6):
         winds.append(wind)
         precips.append(precip)
 
-        print(f"{date_str}, Temp: {temp}, Wind: {wind} mph, Precip: {precip} inches")
+        print(f"{date_str}, Temp: {temp}\N{DEGREE SIGN}F, Wind: {wind} mph, Precip: {precip} inches")
 
     except Exception as e:
         print(f"Error retrieving data for {date_str}: {e}")
 
+    if temps:
+        avg_temp = sum(temps) / len(temps)
+        max_wind = max(winds)
+        total_precip = sum(precips)
 
-daily_data = {"date": pd.date_range(
-	start = pd.to_datetime(daily.Time(), unit = "s", utc = True),
-	end = pd.to_datetime(daily.TimeEnd(), unit = "s", utc = True),
-	freq = pd.Timedelta(seconds = daily.Interval()),
-	inclusive = "left"
-)}
+        print("\n5-Year Summary for January 2nd:")
+        print(f"Average Temperature: {avg_temp:.2f}\N{DEGREE SIGN}F")
+        print(f"Max Wind Speed: {max_wind:.2f} mph")
+        print(f"Total Precipitation: {total_precip:.2f} inches")
+    else:
+        print("No data available!")
 
-daily_data["temperature_2m_mean"] = daily_temperature_2m_mean
-daily_data["wind_speed_10m_max"] = daily_wind_speed_10m_max
-daily_data["precipitation_sum"] = daily_precipitation_sum
 
-daily_dataframe = pd.DataFrame(data = daily_data)
-print("\nDaily data\n", daily_dataframe)
+
+
+
+    daily_data = {"date": pd.date_range(
+        start = pd.to_datetime(daily.Time(), unit = "s", utc = True),
+        end = pd.to_datetime(daily.TimeEnd(), unit = "s", utc = True),
+        freq = pd.Timedelta(seconds = daily.Interval()),
+        inclusive = "left"
+    )}
+
+    daily_data["temperature_2m_mean"] = daily_temperature_2m_mean
+    daily_data["wind_speed_10m_max"] = daily_wind_speed_10m_max
+    daily_data["precipitation_sum"] = daily_precipitation_sum
+
+    daily_dataframe = pd.DataFrame(data = daily_data)
+    print("\nDaily data\n", daily_dataframe)
