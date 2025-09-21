@@ -1,5 +1,5 @@
 class WeatherData:
-    def __init__(self), latitude, longitude, month, day, year):
+    def __init__(self, latitude, longitude, month, day, year):
         #Provided by User
         self.latitude = latitude
         self.longitude = longitude
@@ -88,9 +88,6 @@ for i in range(1, 6):
         print(f"Total Precipitation: {total_precip:.2f} inches")
     else:
         print("No data available!")
-
-
-
 
 
     daily_data = {"date": pd.date_range(
