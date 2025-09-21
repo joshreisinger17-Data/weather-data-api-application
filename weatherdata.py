@@ -60,8 +60,8 @@ for i in range(1, 6):
         "precipitation_unit": "inch",
     }
     responses = openmeteo.weather_api(url, params=params)
+
     response = responses[0]
-    daily = response.daily
 
     try:
         temp = daily.Variables(0).ValuesAsNumpy())[0]
