@@ -13,6 +13,6 @@ class WeatherData:
         self.avg_wind = None
         self.min_wind = None
         self.max_wind = None
-        self.avg_precip = None
+        self.sum_precip = None
         self.min_precip = None
         self.max_precip = None
