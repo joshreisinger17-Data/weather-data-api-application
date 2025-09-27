@@ -3,9 +3,9 @@ class WeatherData:
         #Provided by User
         self.latitude = latitude
         self.longitude = longitude
+        self.day = day
         self.month = month
         self.year = year
-
         #Provided by Weather API
         self.avg_temp = None
         self.min_temp = None
