@@ -5,7 +5,7 @@ from datetime import datetime
 month = 1
 day = 2
 
-
+#Fetching weather data
 def fetch_weather(year):
     date = f"{year}-{month:02d}-{day:02d}"
     url = "https://archive-api.open-meteo.com/v1/archive"
@@ -25,7 +25,7 @@ def fetch_weather(year):
     data = response.json().get("daily", {})
     return data
 
-
+#Methods for each variable
 def avg_temp_years():
     years = [datetime.today().year - i for i in range(1, 6)]
     temps = []
