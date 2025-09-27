@@ -65,3 +65,4 @@ if len(temps) > 0:
     print(f"Total Precipitation: {total_precip: .2f} inches")
 else:
     print("No weather data available!")
+
