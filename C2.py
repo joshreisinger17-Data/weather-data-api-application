@@ -26,7 +26,7 @@ def fetch_weather(year):
     return data
 
 #Methods for each variable
-def avg_temp_years():
+def avg_temp_years(weather):
     years = [datetime.today().year - i for i in range(1, 6)]
     temps = []
     for j in years:
@@ -37,7 +37,7 @@ def avg_temp_years():
     return sum(temps) / len(temps) if temps else None
 
 
-def max_wind_years():
+def max_wind_years(weather):
     years = [datetime.today().year - i for i in range(1, 6)]
     winds = []
     for j in years:
@@ -48,7 +48,7 @@ def max_wind_years():
     return max(winds) if winds else None
 
 
-def sum_precip_years():
+def sum_precip_years(weather):
     years = [datetime.today().year - i for i in range(1, 6)]
     precips = []
     for j in years:
