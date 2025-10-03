@@ -26,6 +26,3 @@ class WeatherRecord(Base):
 engine = create_engine('sqlite:///weather.db')
 #Creates table in DB
 Base.metadata.create_all(engine)
-
-
-h
