@@ -60,4 +60,3 @@ def sum_precip_years(weather):
 
 
 
-
