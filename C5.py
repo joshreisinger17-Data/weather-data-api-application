@@ -26,3 +26,7 @@ record = WeatherRecord(
     min_precip_in = None,
     max_precip_in = None
 )
+
+session.add(record)
+session.commit()
+session.close()
