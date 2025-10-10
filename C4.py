@@ -4,7 +4,7 @@ from sqlalchemy.orm import declarative_base
 #Base class for ORM
 Base = declarative_base()
 
-#Creating a table for weather table
+#Creating a table for weather
 class WeatherRecord(Base):
     __tablename__ = 'weather_record'
     id = Column(Integer, primary_key=True)
