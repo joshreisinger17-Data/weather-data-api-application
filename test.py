@@ -5,7 +5,7 @@ from C2 import fetch_weather, avg_temp_years, max_wind_years
 
 class Test(unittest.TestCase):
     #dummy object/argument for test using class from C1
-    def dummy(self):
+    def setUp(self):
         self.weather = WeatherData(44.5192, -88.0198, 1, 2, year = datetime.today().year)
 
     #Shows our fetch data is non-empty
