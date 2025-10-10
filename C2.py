@@ -21,7 +21,7 @@ def fetch_weather(weather, year):
     data = response.json().get("daily", {})
     return data
 
-#Methods(functions) for each variable
+#Methods for each variable
 def avg_temp_years(weather):
     years = [datetime.today().year - i for i in range(1, 6)]
     temps = []
