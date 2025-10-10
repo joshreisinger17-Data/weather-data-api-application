@@ -4,7 +4,7 @@ from C1 import WeatherData
 from C2 import fetch_weather, avg_temp_years, max_wind_years
 
 class Test(unittest.TestCase):
-    #dummy object/argument for test using class from C1
+    #test object/argument for tests using class from C1
     def setUp(self):
         self.weather = WeatherData(44.5192, -88.0198, 1, 2, year = datetime.today().year)
 
