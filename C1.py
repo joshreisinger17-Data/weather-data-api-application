@@ -1,12 +1,12 @@
 class WeatherData:
     def __init__(self, latitude, longitude, month, day, year):
-        #Provided by User
+        #Provided by User data
         self.latitude = latitude
         self.longitude = longitude
         self.month = month
         self.day = day
         self.year = year
-        #Provided by Weather API
+        #Provided by Weather API data
         self.avg_temp = None
         self.min_temp = None
         self.max_temp = None
