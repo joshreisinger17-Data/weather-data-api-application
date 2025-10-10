@@ -9,7 +9,7 @@ SessionLocal = sessionmaker(bind=engine)
 #Opens session
 session = SessionLocal()
 
-#Input User Data
+#Input User Data from chosen location
 record = WeatherRecord(
     location_latitude = 44.5192,
     location_longitude = -88.0198,
