@@ -4,6 +4,7 @@ from sqlalchemy.orm import declarative_base
 #Base class for ORM
 Base = declarative_base()
 
+#Creating a table for weather table
 class WeatherRecord(Base):
     __tablename__ = 'weather_record'
     id = Column(Integer, primary_key=True)
@@ -24,5 +25,5 @@ class WeatherRecord(Base):
 
 #Connects SQLite file
 engine = create_engine('sqlite:///weather.db')
-#Creates table in DB
+#Creates table in the DB
 Base.metadata.create_all(engine)
