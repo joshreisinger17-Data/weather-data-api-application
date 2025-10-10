@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from C4 import WeatherRecord
 
-#Connects to DB
+#Connects to the DB
 engine = create_engine('sqlite:///weather.db', future=True)
 SessionLocal = sessionmaker(bind=engine)
 
@@ -26,7 +26,7 @@ record = WeatherRecord(
     min_precip_in = None,
     max_precip_in = None
 )
-
+#Finishes/closes the session
 session.add(record)
 session.commit()
 session.close()
