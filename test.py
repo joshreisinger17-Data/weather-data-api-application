@@ -18,10 +18,14 @@ class Test(unittest.TestCase):
     def test_avg_temp_years(self):
         test_avg_temp = avg_temp_years(self.weather)
         self.assertIsInstance(test_avg_temp, (float, int))
+        self.assertGreaterEqual(test_avg_temp, -150)
+        self.assertLessEqual(test_avg_temp, 150)
 
     def test_max_wind_years(self):
         test_max_wind = max_wind_years(self.weather)
         self.assertIsInstance(test_max_wind, (float, int))
+        self.assertGreaterEqual(test_max_wind, 0)
+        self.assertLessEqual(test_max_wind, 300)
 
 if __name__ == '__main__':
     unittest.main()
