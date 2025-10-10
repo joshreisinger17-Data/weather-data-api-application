@@ -1,19 +1,12 @@
 import unittest
 from datetime import datetime
+from C1 import WeatherData
 from C2 import fetch_weather, avg_temp_years, max_wind_years
 
-#dummy class for tests
-class Weather:
-    def __init__(self, latitude, longitude, month, day):
-        self.latitude = latitude
-        self.longitude = longitude
-        self.month = month
-        self.day = day
-
 class Test(unittest.TestCase):
-    #dummy object/argument for test
+    #dummy object/argument for test using class from C1
     def dummy(self):
-        self.weather = Weather(44.5192, -88.0198, 1, 2)
+        self.weather = WeatherData(44.5192, -88.0198, 1, 2, year = datetime.today().year)
 
     #Shows our fetch data is non-empty
     def test_fetch_weather(self):
