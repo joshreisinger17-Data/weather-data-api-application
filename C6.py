@@ -8,6 +8,7 @@ def weather_data_table():
     c.execute('''Select * from weather_record''')
     rows = c.fetchall()
 
+#looping all rows to print
     for row in rows:
         print(row)
 #Closes connection to DB
