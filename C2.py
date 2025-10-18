@@ -71,6 +71,7 @@ if __name__ == "__main__":
         year = datetime.today().year
          )
 
+    print(f"Green Bay, WI on {weather.month:02d}-{weather.day:02d} for the most recent five years.")
     print(f"Average Temperature: {avg_temp_years(weather):.2f}\u00b0F")
     print(f"Max Wind: {max_wind_years(weather):.2f} mph")
     print(f"Total Precipitation: {sum_precip_years(weather):.2f} inches")
