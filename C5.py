@@ -1,5 +1,3 @@
-from os.path import exists
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from C4 import WeatherRecord
