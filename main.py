@@ -10,9 +10,9 @@ max_wind = max_wind_years(weather_data)
 sum_precip = sum_precip_years(weather_data)
 
 #prints results from calls
-print(avg_temp)
-print(max_wind)
-print(sum_precip)
+print(f"Average Temperature: {avg_temp:.2f}\u00b0F")
+print(f"Max Wind: {max_wind:.2f} mph")
+print(f"Total Precipitation: {sum_precip:.2f} inches")
 
 
 
