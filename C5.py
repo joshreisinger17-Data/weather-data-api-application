@@ -1,3 +1,5 @@
+from os.path import exists
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from C4 import WeatherRecord
@@ -5,9 +7,6 @@ from C4 import WeatherRecord
 #Connects to the DB
 engine = create_engine('sqlite:///weather.db', future=True)
 SessionLocal = sessionmaker(bind=engine)
-
-#Opens session
-session = SessionLocal()
 
 #Input User Data from chosen location
 record = WeatherRecord(
@@ -26,7 +25,24 @@ record = WeatherRecord(
     min_precip_in = None,
     max_precip_in = None
 )
-#Finishes/closes the session
-session.add(record)
-session.commit()
-session.close()
+
+if __name__ == '__main__':
+    session = SessionLocal()
+    try:
+        exists = session.query(WeatherRecord).filter_by(
+            location_latitude = record.location_latitude,
+            location_longitude = record.location_longitude,
+            month = record.month,
+            day_of_month = record.day_of_month,
+            year = record.year,
+        ).first()
+
+        if not exists:
+            session.add(record)
+            session.commit()
+            print("Inserted record.")
+
+        else:
+            print("Record already exists.")
+    finally:
+        session.close()
