@@ -58,5 +58,21 @@ def sum_precip_years(weather):
     weather.sum_precip = sum_precip
     return sum_precip
 
+#demonstrating methods/code
+if __name__ == "__main__":
+    from C1 import WeatherData
+    from datetime import datetime
+
+    weather = WeatherData (
+        latitude = 44.5192,
+        longitude = -88.0198,
+        month = 1,
+        day = 2,
+        year = datetime.today().year
+         )
+
+    print(f"Average Temperature: {avg_temp_years(weather):.2f}\u00b0F")
+    print(f"Max Wind: {max_wind_years(weather):.2f} mph")
+    print(f"Total Precipitation: {sum_precip_years(weather):.2f} inches")
 
 
