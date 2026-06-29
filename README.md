@@ -64,6 +64,22 @@ Weather-Data-API-Application/
 
 ---
 
+## Example Input
+
+Location:
+- Latitude: 42.8865
+- Longitude: -78.8784 (Buffalo, NY)
+
+Date:
+- December 25th
+
+The application retrieves weather data for the same data over the previous five years and calculates:
+- Average Temperature (F)
+- Maximum Wind Speed (mph)
+- Total Precipitation (inches) 
+
+---
+
 ## Installation
 
 Clone the repository:
