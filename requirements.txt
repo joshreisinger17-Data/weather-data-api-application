@@ -1,2 +1,5 @@
-requests
-SQLAlchemy
+openmeteo-requests==v.1.3
+requests-cache==v1.2
+retry-requests==v2.0
+requests==v2.32
+SQLAlchemy==v2.0
