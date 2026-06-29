@@ -1,5 +1,5 @@
-from C1 import WeatherData
-from C2 import avg_temp_years, max_wind_years, sum_precip_years
+from weather_data import WeatherData
+from weather_analysis import avg_temp_years, max_wind_years, sum_precip_years
 
 #Instance of class created in C1
 weather_data = WeatherData(42.8865, -78.8784, 12, 25, 2023)

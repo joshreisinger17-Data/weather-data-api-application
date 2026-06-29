@@ -60,7 +60,7 @@ def sum_precip_years(weather):
 
 #demonstrating methods/code
 if __name__ == "__main__":
-    from C1 import WeatherData
+    from weather_data import WeatherData
     from datetime import datetime
 
     weather = WeatherData (

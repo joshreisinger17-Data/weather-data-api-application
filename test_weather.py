@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime
-from C1 import WeatherData
-from C2 import fetch_weather, avg_temp_years, max_wind_years
+from weather_data import WeatherData
+from weather_analysis import fetch_weather, avg_temp_years, max_wind_years
 
 class Test(unittest.TestCase):
     #test object/argument for tests using class from C1

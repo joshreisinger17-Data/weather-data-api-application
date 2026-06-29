@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from C4 import WeatherRecord
+from database_model import WeatherRecord
 
 #Connects to the DB
 engine = create_engine('sqlite:///weather.db', future=True)
