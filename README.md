@@ -38,11 +38,29 @@ Weather-Data-API-Application/
 ├── database_query.py
 ├── database_model.py
 ├── test_weather.py
-├── weather.db
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
+---
+
+## Screenshots
+
+### Application Output
+
+![Application Output](images/program_output.png)
+
+### Unit Tests
+
+![Unit Tests](images/unit_tests.png)
+
+### SQLite Database
+
+![SQLite Database](images/database_table.png)
+
+### Weather API Integration
+
+![Weather API](images/weather_api.png)
 
 ---
 
